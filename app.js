@@ -46,6 +46,9 @@ app.get("/", async function(req, res, next) {
       height: o.vh
     });
     await page.goto(o.url);
+    
+  setTimeout(function() {
+
     let binary = await page.screenshot({
       type: o.type
     });
@@ -73,6 +76,9 @@ app.get("/", async function(req, res, next) {
     }
 
     next();
+    
+  }, 3000);
+
   } catch (error) {
     next(error);
   }
