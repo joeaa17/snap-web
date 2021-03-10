@@ -47,7 +47,7 @@ app.get("/", async function(req, res, next) {
     });
     await page.goto(o.url);
     
-  setTimeout(function() {
+  setTimeout(async function() {
 
     let binary = await page.screenshot({
       type: o.type
