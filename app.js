@@ -77,7 +77,7 @@ app.get("/", async function(req, res, next) {
 
     next();
     
-  }, 3000);
+  }, 7000);
 
   } catch (error) {
     next(error);
